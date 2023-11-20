@@ -49,3 +49,51 @@
     cursor: pointer;
     
 }
+.bata {
+  background-color: red;
+  color: black;
+  border: none;
+  padding: 8px 27px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 400px;
+  left: 140px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+.bata:hover {
+  background-color: gray;
+}
+
+.register-link{
+  color:red;
+}
+
+.card4-content p{
+  position: absolute;
+  top: 450px;
+  left: 90px;
+}
+.card4-content img{
+  position: absolute;
+  top: 158px;
+  left: 82px;
+  height: 30px;
+  width: 30px;
+}
+#gigi{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top:241px;
+}
+#gi{
+  position: absolute;
+  top: 317px;
+  
+}
+span{
+  color: #fff;
+}

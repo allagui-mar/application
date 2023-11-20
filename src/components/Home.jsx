@@ -17,7 +17,7 @@ export default function Home (){
        <div className="card">
       <div className="card-content">
         <h2>WHAT IS GO<span style={{color: 'red'}}>MYCODE</span>COURSES</h2>
-        <p>GOMYCODE COURSES is a plate-forme that provides you with the opportunity to manage your courses, consult the students list, the students group and to constact them whenever you it's necessary.</p>
+        <p>GOMYCODE COURSES is a plate-forme that provides you with the opportunity to manage your courses, consult the students list, the students group and to constact them whenever it's necessary.</p>
         <img src={carde} alt="Card Image"  />
       </div>
       

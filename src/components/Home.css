@@ -9,17 +9,7 @@
     cursor: pointer;
     
 }
-@keyframes scaleAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
 
   .titre{
     margin-top: -200px;
@@ -166,5 +156,5 @@
   }
   
   .card3 button:hover {
-    background-color: gray; /* Change button background color to gray on hover */
+    background-color: gray; 
   }

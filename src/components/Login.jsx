@@ -1,9 +1,27 @@
 
 import React, { useState } from 'react';
+import Select from 'react-select';
+import { Link } from 'react-router-dom';
 import './Login.css';
 import LogoGo from '../assets/LogoGo.png';
+import add from '../assets/add.png'
+import sel from '../assets/sel.png'
+import pass from '../assets/pass.png'
 import { BrowserRouter as Router, Route, useNavigate } from 'react-router-dom';
+import Signup from './Signup';
+import Teacherspace from './Teacherspace'
 export default function Login(){
+  const options = [
+    { label: '', value: '' },
+    { label: 'Student', value: 'Student' },
+    { label: 'Teacher', value: 'Teacher' },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleSelectChange = (selectedOption) => {
+    setSelectedOption(selectedOption);
+  };
     const navig = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -80,6 +98,10 @@ export default function Login(){
     >
       <div className="card4-content">
         <h2>LOG<span style={{color: 'red'}}>IN</span></h2>
+       <img src={add} className='dheb'/>
+       <img src={pass} id='gigi'/>
+
+         
         <input
           style={input}
           placeholder="Email ID"
@@ -95,9 +117,33 @@ export default function Login(){
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+         <img src={sel} id='gi'/>
+        <Select
+        options={options}
+        value={selectedOption}
+        onChange={handleSelectChange}
+        placeholder=""
+        styles={{
+          control: (provided) => ({
+            ...provided,
+            height: 40,
+            left:20,
+            width: '79%',
+            top:-15,
+            marginBottom: 20,
+            borderBottomWidth: 1,
+            borderColor: '#D31919',
+            borderWidth: 0,
+          }),
+        }}
+      />
 
 </div>
+           
+           <button className='bata' onClick={()=>{navig('/teacherspace')}}>
+            Log <span >In</span></button>
 
+            <p>New to the App? <Link className='register-link' to='/signup'>Register</Link></p>
        
       </div>
       </div>
@@ -108,3 +154,6 @@ export default function Login(){
         </div>
     )
 }
+
+
+
